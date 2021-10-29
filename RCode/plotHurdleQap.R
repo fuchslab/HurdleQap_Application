@@ -376,7 +376,6 @@ plotGlmQap <- function(results, rug = FALSE, plotTitles = NULL, xLabels = NULL, 
 
 plotHurdleQap <- function(results, method = "parametric", rug = FALSE, plotTitles = NULL, xLabels = NULL, display = "terms", legend = TRUE){
   if(method == "parametric"){
-    display <- terms
     plotPar <- plotGlmQap(results = results, rug = rug,
                                plotTitles = plotTitles, xLabels = xLabels)
     return(plotPar)
