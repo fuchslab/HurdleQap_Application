@@ -1,0 +1,239 @@
+---
+title: "ModelOutputs"
+author: "Hannah Marchi"
+date: "27 10 2021"
+output: html_document
+---
+
+
+# Bielefeld
+## three covariates
+```{r, message = FALSE}
+library(mgcv)
+```
+
+### all buildings
+
+```{r}
+load("Workspaces/server/Original_all_all_x3_wrapper_Bielefeld.RData")
+rversion
+```
+
+#### all distances
+##### Glm binomial
+```{r}
+summary(Original_all_all_x3$modelGlmBin)
+Original_all_all_x3$qaplist$zeroGlm$xbin_1[2:4]
+Original_all_all_x3$qaplist$zeroGlm$xbin_2[2:4]
+Original_all_all_x3$qaplist$zeroGlm$xbin_3[2:4]
+```
+
+##### Glm poisson
+```{r}
+summary(Original_all_all_x3$modelGlmPois)
+Original_all_all_x3$qaplist$countGlm$xpois_1[2:4]
+Original_all_all_x3$qaplist$countGlm$xpois_2[2:4]
+Original_all_all_x3$qaplist$countGlm$xpois_3[2:4]
+```
+
+##### Gam binomial
+```{r}
+summary(Original_all_all_x3$modelGamBin)
+Original_all_all_x3$qaplist$zeroGam[[1]][2:4]
+Original_all_all_x3$qaplist$zeroGam[[2]][2:4]
+```
+
+##### Gam poisson
+```{r}
+summary(Original_all_all_x3$modelGamPois)
+Original_all_all_x3$qaplist$countGam[[1]][2:4]
+Original_all_all_x3$qaplist$countGam[[2]][2:4]
+rm(Original_all_all_x3)
+```
+
+#### interd
+
+##### Glm binomial
+```{r}
+load("Workspaces/server/Original_interd_all_x3_wrapper_Bielefeld.RData")
+rversion
+summary(Original_interd_all_x3$modelGlmBin)
+Original_interd_all_x3$qaplist$zeroGlm$xbin_1[2:4]
+Original_interd_all_x3$qaplist$zeroGlm$xbin_2[2:4]
+Original_interd_all_x3$qaplist$zeroGlm$xbin_3[2:4]
+```
+
+##### Glm poisson
+```{r}
+summary(Original_interd_all_x3$modelGlmPois)
+Original_interd_all_x3$qaplist$countGlm$xpois_1[2:4]
+Original_interd_all_x3$qaplist$countGlm$xpois_2[2:4]
+Original_interd_all_x3$qaplist$countGlm$xpois_3[2:4]
+```
+
+##### Gam binomial
+```{r}
+summary(Original_interd_all_x3$modelGamBin)
+Original_interd_all_x3$qaplist$zeroGam[[1]][2:4]
+Original_interd_all_x3$qaplist$zeroGam[[2]][2:4]
+```
+
+##### Gam poisson
+```{r}
+summary(Original_interd_all_x3$modelGamPois)
+Original_interd_all_x3$qaplist$countGam[[1]][2:4]
+Original_interd_all_x3$qaplist$countGam[[2]][2:4]
+rm(Original_interd_all_x3)
+```
+
+
+#### inst
+
+##### Glm binomial
+```{r}
+load("Workspaces/server/Original_inst_all_x3_wrapper_Bielefeld.RData")
+rversion
+summary(Original_inst_all_x3$modelGlmBin)
+Original_inst_all_x3$qaplist$zeroGlm$xbin_1[2:4]
+Original_inst_all_x3$qaplist$zeroGlm$xbin_2[2:4]
+Original_inst_all_x3$qaplist$zeroGlm$xbin_3[2:4]
+```
+
+##### Glm poisson
+```{r}
+summary(Original_inst_all_x3$modelGlmPois)
+Original_inst_all_x3$qaplist$countGlm$xpois_1[2:4]
+Original_inst_all_x3$qaplist$countGlm$xpois_2[2:4]
+Original_inst_all_x3$qaplist$countGlm$xpois_3[2:4]
+```
+
+##### Gam binomial
+```{r}
+summary(Original_inst_all_x3$modelGamBin)
+Original_inst_all_x3$qaplist$zeroGam[[1]][2:4]
+Original_inst_all_x3$qaplist$zeroGam[[2]][2:4]
+```
+
+##### Gam poisson
+```{r}
+summary(Original_inst_all_x3$modelGamPois)
+Original_inst_all_x3$qaplist$countGam[[1]][2:4]
+Original_inst_all_x3$qaplist$countGam[[2]][2:4]
+rm(Original_inst_all_x3)
+```
+
+
+
+
+### main building
+
+```{r}
+load("Workspaces/server/Original_all_main_x3_wrapper_Bielefeld.RData")
+rversion
+```
+
+
+#### all distances
+##### Glm binomial
+```{r}
+summary(Original_all_main_x3$modelGlmBin)
+Original_all_main_x3$qaplist$zeroGlm$xbin_1[2:4]
+Original_all_main_x3$qaplist$zeroGlm$xbin_2[2:4]
+Original_all_main_x3$qaplist$zeroGlm$xbin_3[2:4]
+```
+
+##### Glm poisson
+```{r}
+summary(Original_all_main_x3$modelGlmPois)
+Original_all_main_x3$qaplist$countGlm$xpois_1[2:4]
+Original_all_main_x3$qaplist$countGlm$xpois_2[2:4]
+Original_all_main_x3$qaplist$countGlm$xpois_3[2:4]
+```
+
+##### Gam binomial
+```{r}
+summary(Original_all_main_x3$modelGamBin)
+Original_all_main_x3$qaplist$zeroGam[[1]][2:4]
+Original_all_main_x3$qaplist$zeroGam[[2]][2:4]
+```
+
+##### Gam poisson
+```{r}
+summary(Original_all_main_x3$modelGamPois)
+Original_all_main_x3$qaplist$countGam[[1]][2:4]
+Original_all_main_x3$qaplist$countGam[[2]][2:4]
+rm(Original_all_main_x3)
+```
+
+#### interd
+
+##### Glm binomial
+```{r}
+load("Workspaces/server/Original_interd_main_x3_wrapper_Bielefeld.RData")
+rversion
+summary(Original_interd_main_x3$modelGlmBin)
+Original_interd_main_x3$qaplist$zeroGlm$xbin_1[2:4]
+Original_interd_main_x3$qaplist$zeroGlm$xbin_2[2:4]
+Original_interd_main_x3$qaplist$zeroGlm$xbin_3[2:4]
+```
+
+##### Glm poisson
+```{r}
+summary(Original_interd_main_x3$modelGlmPois)
+Original_interd_main_x3$qaplist$countGlm$xpois_1[2:4]
+Original_interd_main_x3$qaplist$countGlm$xpois_2[2:4]
+Original_interd_main_x3$qaplist$countGlm$xpois_3[2:4]
+```
+
+##### Gam binomial
+```{r}
+summary(Original_interd_main_x3$modelGamBin)
+Original_interd_main_x3$qaplist$zeroGam[[1]][2:4]
+Original_interd_main_x3$qaplist$zeroGam[[2]][2:4]
+```
+
+##### Gam poisson
+```{r}
+summary(Original_interd_main_x3$modelGamPois)
+Original_interd_main_x3$qaplist$countGam[[1]][2:4]
+Original_interd_main_x3$qaplist$countGam[[2]][2:4]
+rm(Original_interd_main_x3)
+```
+
+
+#### inst
+
+##### Glm binomial
+```{r}
+load("Workspaces/server/Original_inst_main_x3_wrapper_Bielefeld.RData")
+rversion
+summary(Original_inst_main_x3$modelGlmBin)
+Original_inst_main_x3$qaplist$zeroGlm$xbin_1[2:4]
+Original_inst_main_x3$qaplist$zeroGlm$xbin_2[2:4]
+Original_inst_main_x3$qaplist$zeroGlm$xbin_3[2:4]
+```
+
+##### Glm poisson
+```{r}
+summary(Original_inst_main_x3$modelGlmPois)
+Original_inst_main_x3$qaplist$countGlm$xpois_1[2:4]
+Original_inst_main_x3$qaplist$countGlm$xpois_2[2:4]
+Original_inst_main_x3$qaplist$countGlm$xpois_3[2:4]
+```
+
+##### Gam binomial
+```{r}
+summary(Original_inst_main_x3$modelGamBin)
+Original_inst_main_x3$qaplist$zeroGam[[1]][2:4]
+Original_inst_main_x3$qaplist$zeroGam[[2]][2:4]
+```
+
+##### Gam poisson
+```{r}
+summary(Original_inst_main_x3$modelGamPois)
+Original_inst_main_x3$qaplist$countGam[[1]][2:4]
+Original_inst_main_x3$qaplist$countGam[[2]][2:4]
+rm(Original_inst_main_x3)
+```
+
+
