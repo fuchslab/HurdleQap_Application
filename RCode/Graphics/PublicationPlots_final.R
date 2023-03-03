@@ -28,7 +28,7 @@ numPub <- long %>%
   summarise(count_dep = n()) %>%
   ggplot(aes(x = reorder(dep, -count_dep), y = count_dep)) +
   geom_bar(stat = 'identity', aes(fill = category))+
-  labs(title = "Helmholtz Zentrum München", subtitle = "Year 2015 - 2019",
+  labs(title = "Helmholtz Munich", subtitle = "Year 2015 - 2019",
        x = "", y = "Number of publications") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1),
         axis.text = element_text(size = rel(1)),
@@ -565,7 +565,7 @@ P12 <- ggplotGrob(CDF1_Bielefeld)
 P21 <- ggplotGrob(CDF6_HMGU)
 
 lay_m <- rbind(c(1, 2), c(3, 4), c(5, 5))
-combineCDF_bottom <-  grid.arrange(arrangeGrob(P11, top = textGrob("        Helmholtz Zentrum München", gp = gpar(fontsize = 22, fontface = 'bold')), left = textGrob("Overall collaboration", gp = gpar(fontsize = 22, fontface = 'bold'), rot = 90)), 
+combineCDF_bottom <-  grid.arrange(arrangeGrob(P11, top = textGrob("        Helmholtz Munich", gp = gpar(fontsize = 22, fontface = 'bold')), left = textGrob("Overall collaboration", gp = gpar(fontsize = 22, fontface = 'bold'), rot = 90)), 
                                    arrangeGrob(P12, top = textGrob("Bielefeld University", gp = gpar(fontsize = 22, fontface = 'bold'))), 
                                    arrangeGrob(P21, left = textGrob("Interdisciplinary collaboration", gp = gpar(fontsize = 22, fontface = 'bold'), rot = 90)), 
                                    P22, 
